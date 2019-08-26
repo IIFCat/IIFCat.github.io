@@ -1,6 +1,6 @@
 ---
 title: "combined"
-output: flexdashboard::flex_dashboard
+output: html_document
 runtime: shiny
 ---
 

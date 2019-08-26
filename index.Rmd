@@ -1,8 +1,8 @@
 ---
 title: "Visualization of Zhang Group Data"
-output: flexdashboard::flex_dashboard
+#output: flexdashboard::flex_dashboard
 runtime: shiny
-#output: html_document
+output: html_document
     
 # pango cairo 
 ---
