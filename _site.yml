@@ -1,0 +1,10 @@
+name: "my-website"
+navbar:
+  title: "My Website"
+  left:
+    - text: "Visualization of Zhang Group Data"
+      href: index.html
+    - text: "About"
+      href: about.html
+
+output_dir: "."
