@@ -1,0 +1,19 @@
+---
+title: "Visualization of Zhang Group Data"
+output: flexdashboard::flex_dashboard
+runtime: shiny
+    
+# pango cairo 
+---
+
+```{r global, include=FALSE}
+#library(rsconnect)
+#deployApp('../demoApp')
+library(shiny)
+```
+
+
+
+```{r, echo=FALSE}
+runApp("../shinyapps001/", launch.browser = TRUE)
+```
