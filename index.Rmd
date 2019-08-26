@@ -12,8 +12,8 @@ runtime: shiny
 library(shiny)
 ```
 
-
+hello
 
 ```{r, echo=FALSE}
-runApp("../shinyapps001/", launch.browser = TRUE)
+#runApp("../shinyapps001/", launch.browser = TRUE)
 ```
