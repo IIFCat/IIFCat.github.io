@@ -1,10 +1,15 @@
 name: "my-website"
+runtime: shiny
+
 navbar:
   title: "My Website"
+  type: inverse
   left:
     - text: "Visualization of Zhang Group Data"
+      icon: fa-home
       href: index.html
     - text: "About"
+      icon: fa-info
       href: about.html
 
 output_dir: "."
