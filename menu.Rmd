@@ -1,0 +1,40 @@
+---
+title: "About This Website"
+output:
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    social: menu
+    source_code: embed
+#output: html_document
+runtime: shiny
+---
+  
+  More about this website.
+  
+Column 1 {data-width=400}
+------------------------------------
+### Length vs rating
+
+This example makes use of `plotly` and `ggplot2`. There is also a `valuebox` showing the number
+of terrible movies.
+
+Column 2 {data-width=400}
+-------------------------------------
+
+### Movie ratings over number
+
+This example makes use of the `dygraphs` R package. The dygraphs
+package provides rich facilities for charting time-series data 
+in R. 
+
+```{r}
+print("This is where heatmap 1 goes.")
+```
+
+### Number of movies made
+
+```{r}
+print("This is where heatmap 2 goes.")
+```
+
+### Human Adult Brain Data & Human Kidney Data
