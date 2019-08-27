@@ -1,0 +1,35 @@
+---
+title: "rshiny001"
+output: flexdashboard::flex_dashboard
+runtime: shiny
+---
+
+### Shiny and Rmarkdown website within the same document would result in Error: path for html_dependency not provided
+
+Inputs {.sidebar}
+-------------------------------------
+
+```{r}
+# shiny inputs defined here
+library(shiny)
+library(nasaweather)
+#source('./storm_helpers.R')
+
+selectInput("none","Choose a storm:",
+            choices = unique(storms$name),
+            selected = storms$name[1])
+#data <- reactive(subset(storms, name == input$name))
+```
+ 
+Column
+-------------------------------------
+    
+### Chart 1
+    
+```{r}
+```
+    
+### Chart 2
+
+```{r}
+```

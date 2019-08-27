@@ -10,7 +10,7 @@ navbar:
       href: menu.html
     - text: "Visualization of Zhang Group Data"
       icon: fa-home
-      href: index.html
+      href: datavis.html
     - text: "About"
       icon: fa-info
       href: about.html

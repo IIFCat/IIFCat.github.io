@@ -1,0 +1,65 @@
+---
+title: "datavis001"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+# library for plot generation
+library(dygraphs)
+library(flexdashboard)
+
+library(plotly)
+
+# library for data analysis
+library(dplyr)
+library(Seurat) #Version 3
+library(Matrix)
+library(ggplot2)
+```
+
+```{r, include=FALSE} 
+# loading analyzed Robj data
+load("~/Documents/2019b Summer/academic stuff/Blue Data/Adult_Normal_Kidney_snDrop_Lake2019_NCOMM_Seuratv3.Robj")
+load("~/Documents/2019b Summer/academic stuff/Blue Data/Adult_Normal_Kidney_snDrop_Lake2019_NCOMM_Cluster_Colors.Robj")
+
+#Access metadata
+head(ank.3@meta.data)
+table(ank.3$patient,ank.3$sex)
+table(ank.3$cluster_ID,ank.3$patient)
+
+```
+
+Column {data-width=600}{.tabset}
+-------------------------------------
+
+### 2D Scatter Plot of Dimension Reduction:
+
+```{r, echo=FALSE} 
+p1 <- DimPlot(ank.3, reduction = "pUMAP", pt.size = 0.8 
+) + NoLegend() + scale_color_manual(values = alpha(cl.cols, 0.6), name = "ident")
+ggplotly(p1, width = 600, height = 500)
+```
+
+### 2D Scatter Plot of Dimension Reduction groupbed by sex:
+```{r, echo=FALSE} 
+p2 <- DimPlot(ank.3, reduction = "pUMAP", pt.size = 0.5, label = FALSE, group.by = "sex") 
+ggplotly(p2, width = 600, height = 500)
+```
+
+Column {data-width=400}
+-------------------------------------
+
+### Expression Plot of Selected Gene:
+```{r, echo=FALSE} 
+p3 <- DotPlot(object = ank.3, features = c("NPHS2", "LRP2", "AQP2")) + RotatedAxis()
+ggplotly(p3, width = 400, height = 320)
+```
+
+### Locating Selected Gene on Dimension Reduction Plot:
+```{r, echo=FALSE} 
+p4 <- FeaturePlot(object = ank.3, reduction = "pUMAP", features = "UMOD")
+ggplotly(p4, width = 400, height = 320)
+```
