@@ -14,5 +14,8 @@ navbar:
     - text: "About"
       icon: fa-info
       href: about.html
+    - text: "rshiny2"
+      icon: 
+      href: rshiny2.html
 
 output_dir: "."
