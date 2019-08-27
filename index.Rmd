@@ -1,6 +1,6 @@
 ---
 title: "Visualization of Zhang Group Data"
-#output: flexdashboard::flex_dashboard
+output: flexdashboard::flex_dashboard
 runtime: shiny
 output: html_document
     
@@ -23,7 +23,7 @@ library(nasaweather)
 
 #selectInput("none","Choose a storm:",
 #            choices = unique(storms$name),
-#            selected = storms$name[1])
+#            selected = storms$name[1])d
 data <- reactive(subset(storms, name == input$name))
 ```
 
