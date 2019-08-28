@@ -21,9 +21,9 @@ library(shiny)
 library(nasaweather)
 #source('./storm_helpers.R')
 
-selectInput("none","Choose a storm:",
-            choices = unique(storms$name),
-            selected = storms$name[1])
+#selectInput("none","Choose a storm:",
+#            choices = unique(storms$name),
+#            selected = storms$name[1])
 #data <- reactive(subset(storms, name == input$name))
 ```
 

@@ -1,6 +1,6 @@
 ---
 title: "rshiny2"
-output: html_document
+output: html_fragment
 ---
 
 ### For visualization of individual gene behavior, click on
