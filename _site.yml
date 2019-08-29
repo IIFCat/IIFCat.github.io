@@ -1,18 +1,17 @@
-name: "my-website"
-runtime: shiny
-
+name: "scRNA Data from Kun Zhang Group"
+output_dir: "."
 navbar:
-  title: "My Website"
-  type: inverse
+  title: "scRNA Data from Kun Zhang Group"
   left:
-    - text: "Menu"
-      icon: fa-menu
-      href: menu.html
-    - text: "Visualization of Zhang Group Data"
+    - text: "Home"
       icon: fa-home
-      href: datavis.html
+      href: index.html
+#    - text: "Visualization of Zhang Group Data"
+#      icon: 
+#      href: 
     - text: "About"
       icon: fa-info
       href: about.html
-
-output_dir: "."
+output:
+  html_document:
+      theme: paper

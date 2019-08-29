@@ -1,11 +1,14 @@
 ---
 title: "About This Website"
-#output:
-#  flexdashboard::flex_dashboard:
-#    orientation: columns
-#    social: menu
-#    source_code: embed
-output: html_document
+output:
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    #social: menu
+    #source_code: embed
+    theme: bootstrap
+    navbar: 
+        - { title: "Home", icon: fa-home, href: index.html}
+        - { title: "About", icon: fa-info, href: about.html}
 runtime: shiny
 ---
   
@@ -36,5 +39,3 @@ print("This is where heatmap 1 goes.")
 ```{r}
 print("This is where heatmap 2 goes.")
 ```
-
-### Human Adult Brain Data & Human Kidney Data
