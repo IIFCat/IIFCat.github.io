@@ -12,6 +12,9 @@ output:
   flexdashboard::flex_dashboard:
     orientation: columns
     theme: bootstrap
+    navbar: 
+      - { title: "Home", icon: fa-home, href: index.html}
+      - { title: "About", icon: fa-info, href: about.html}
 ---
 
 ```{r setup, include=FALSE}
@@ -31,8 +34,8 @@ library(ggplot2)
 
 ```{r, include=FALSE} 
 # loading analyzed Robj data
-load("~/Documents/2019b Summer/academic stuff/Blue Data/Adult_Normal_Kidney_snDrop_Lake2019_NCOMM_Seuratv3.Robj")
-load("~/Documents/2019b Summer/academic stuff/Blue Data/Adult_Normal_Kidney_snDrop_Lake2019_NCOMM_Cluster_Colors.Robj")
+load("~/Documents/2019b_Summer/academic_stuff/Blue Data/Adult_Normal_Kidney_snDrop_Lake2019_NCOMM_Seuratv3.Robj")
+load("~/Documents/2019b_Summer/academic_stuff/Blue Data/Adult_Normal_Kidney_snDrop_Lake2019_NCOMM_Cluster_Colors.Robj")
 cl.Annotation = c("Epithelial cells", "Podocytes", "Proximal tubule Ep. cells (S1/S2)", "Proximal tubule Ep. cells (S2)", "PT Ep. cells - inflam. response", "PT Ep. cells - fibrinogen+ (S3)", "Proximal tubule Ep. Cells (S3)", "Decending thin limb", "Thin ascending limb", "Thin ascending limb", "Thin ascending limb", "Thick ascending limb - surgery", "Thick ascending limb", "Distal convoluted tubule", "Connecting tubule", "Collecting system - PCs (cortex)", "Collecting system - PCs - stressed", "Collecting duct - principal cells", "Collecting duct - intercalated cells", "Collecting duct - intercalated cells", "Collecting duct - intercalated cells", "Endothelial cells - glomerular cap.", "Endothelial cells - AVR", "Endothelial cells - AEA & DVR", "Endothelial cells", "Mesangial cells", "Vas. Sm. muscle cells/pericytes", "Interstitium", "Unknown - novel PT (S2) Ep. cells?", "Immune cells - macrophages")
 names(cl.Annotation) <- c(1:30)
 
